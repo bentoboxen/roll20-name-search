@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "Roll20 search",
+	"version": "0.3",
+	"permissions": [
+		"cookies",
+		"storage",
+		"*://app.roll20.net/*"
+	],
+	"content_scripts": [{
+		"matches": ["*://*.roll20.net/*"],
+		"js": ["jquery-3.2.1.min.js", "search.js"]
+	}],
+	"background": {
+		"scripts": ["background.js"]
+	}
+}
